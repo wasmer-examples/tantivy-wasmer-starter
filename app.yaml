@@ -1,0 +1,12 @@
+name: wikipedia-index
+app_id: da_nzrI7tJUjXgn
+owner: amin
+package: .
+volumes:
+- name: index
+  mounts:
+  - mount_path: /index
+    sub_path: null
+scaling:
+  mode: single_concurrency
+kind: wasmer.io/App.v0

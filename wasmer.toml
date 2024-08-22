@@ -1,0 +1,15 @@
+[package]
+name = "amin/wikipeda-index"
+version = "0.1.4"
+description = "Wikipedia index using tantivy"
+
+[dependencies]
+"wasmer/tantivy" = "=0.1.0"
+
+[[command]]
+name = "run"
+module = "wasmer/tantivy:tantivy"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = ["serve", "-i", "/index"]
